@@ -5,7 +5,6 @@ const Temp = () => {
   const [city, setCity] = useState(null);
   const [search, setSearch] = useState("Mumbai");
 
-
   useEffect(() => {
     const fetchApi = async () => {
       const url = `http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=e707e338051602848e6d15b3f8ce0c64`
@@ -16,8 +15,6 @@ const Temp = () => {
     };
     fetchApi();
   }, [search])
-
-
 
   return (
     <>
@@ -47,9 +44,10 @@ const Temp = () => {
             <div className="wave -three"></div>
           </div>
         )}
+
       </div >
     </>
   )
 }
 
-export default Temp
+export default Temp;
